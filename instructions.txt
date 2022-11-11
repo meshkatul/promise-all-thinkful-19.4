@@ -1,0 +1,20 @@
+Modern asynchronous programming: Promise.all()
+Instructions
+To complete this practice problem, you will need to write a function that makes use of the Promise.all() class method.
+
+Starter code
+To start, make sure you've forked and cloned the constellations server, linked below. Follow the instructions in that repository to get the project up and running.
+
+GitHub: Constellations server
+bulkDelete()
+Method	Path	Response
+DELETE	/constellations/:id	An array of objects.
+The bulkDelete() method should take an array of IDs, which could be either strings or numbers. Then, an equal number of requests should be made to the URL above, replacing :id with the given ID.
+
+The return value should be an array of objects, where the only key in that object is an id. You will need to construct this object on your own; it is not what is returned from the Constellations server.
+
+const ids = ["KGQIwSq", "32TN5F8"];
+bulkDelete(ids).then(console.log);
+//> Request is made to http://localhost:5000/constellations/KGQIwSq
+//> Request is made to http://localhost:5000/constellations/32TN5F8
+//> Return value: [ { id: "KGQIwSq" }, { id: "32TN5F8" }]
